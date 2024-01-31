@@ -1,7 +1,3 @@
-export function generateDate(year: number) {
-  return new Date(Date.UTC(year, 1, 2, 3, 4, 5)).toString();
-}
-
 export function generateRandomString(length: number) {
   let result = "";
   const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -12,8 +8,4 @@ export function generateRandomString(length: number) {
   }
 
   return result;
-}
-
-export function getRandomInt(max: number) {
-  return Math.floor(Math.random() * max);
 }

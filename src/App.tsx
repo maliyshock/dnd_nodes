@@ -12,6 +12,7 @@ import { generateRandomString } from "./utils/common.ts";
 
 const nodeTypes = { node: CustomNode };
 
+// TODO: this file is quite big, it would be a good idea to thing how it can be splited
 function App() {
   const edgeUpdateSuccessful = useRef(true);
   const { status, error, data } = useGetNodes();

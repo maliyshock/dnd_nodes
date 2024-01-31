@@ -16,7 +16,8 @@ export default function Autocomplete({ placeholder = "", autocompleteFn, onSelec
   const [isOpen, setIsOpen] = useState(false);
   const ref = useOutsideClick(() => setIsOpen(false));
 
-  const handleSuggestions = useCallback(
+  // we should use useCallback here
+  const handleGetSuggestions = useCallback(
     debounce((term: string) => {
       const result = autocompleteFn(term);
       setSuggestions(result);
@@ -24,9 +25,10 @@ export default function Autocomplete({ placeholder = "", autocompleteFn, onSelec
     [autocompleteFn],
   );
 
+  //TODO: initial search value and results limitation
   useEffect(() => {
-    handleSuggestions("");
-  }, [handleSuggestions]);
+    handleGetSuggestions("");
+  }, [handleGetSuggestions]);
 
   return (
     <div className="autocomplete" ref={ref}>
@@ -37,7 +39,7 @@ export default function Autocomplete({ placeholder = "", autocompleteFn, onSelec
         value={search}
         onChange={e => {
           setSearch(e.target.value);
-          handleSuggestions(e.target.value);
+          handleGetSuggestions(e.target.value);
         }}
         onFocus={() => setIsOpen(true)}
       />
@@ -48,9 +50,10 @@ export default function Autocomplete({ placeholder = "", autocompleteFn, onSelec
               {suggestions.map(item => (
                 <li
                   onClick={() => {
+                    // i would rather to use useCallback here or even wrap the whole li thing to component
                     onSelect(item);
                     setSearch(item.name);
-                    handleSuggestions(item.name);
+                    handleGetSuggestions(item.name);
                     setIsOpen(false);
                   }}
                   className="autocomplete__item"

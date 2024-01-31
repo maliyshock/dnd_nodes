@@ -56,3 +56,9 @@
 .node__outputs {
     left: 100%;
 }
+
+.node__header {
+    position: absolute;
+    bottom: 100%;
+    min-width: 200px;
+}
