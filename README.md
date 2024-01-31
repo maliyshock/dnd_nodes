@@ -1,17 +1,17 @@
 # features
-✅ display a simple workflow with nodes as
-✅ shown in the screenshot
-✅ display a search field
-✅ when typing, show list of possible new nodes to
-✅ add (hard coded list or mocked HTTP response)
-✅ allow adding nodes to the workflow
-✅ allow free moving of nodes
-✅ draw the node connections
+* ✅ display a simple workflow with nodes as
+* ✅ shown in the screenshot
+* ✅ display a search field
+* ✅ when typing, show list of possible new nodes to
+* ✅ add (hard coded list or mocked HTTP response)
+* ✅ allow adding nodes to the workflow
+* ✅ allow free moving of nodes
+* ✅ draw the node connections
 
 ## additional features
-✅ you can remove edges between nodes with backspace or draggin out (should be close to the handle) the line
-✅ feedback protection - you can not connect your output with input on the same node
-✅ all additional stuff that flow provides you from the box - like zooming, dragging the dnd field
+* ✅ you can remove edges between nodes with backspace or draggin out (should be close to the handle) the line
+* ✅ feedback protection - you can not connect your output with input on the same node
+* ✅ all additional stuff that flow provides you from the box - like zooming, dragging the dnd field
 
 
 ## My thoughts
