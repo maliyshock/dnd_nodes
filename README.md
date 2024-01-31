@@ -12,6 +12,7 @@
 * ✅ you can remove edges between nodes with backspace or draggin out (should be close to the handle) the line
 * ✅ feedback protection - you can not connect your output with input on the same node
 * ✅ all additional stuff that flow provides you from the box - like zooming, dragging the dnd field
+* ✅ you can not connect outputs
 
 
 ## My thoughts
