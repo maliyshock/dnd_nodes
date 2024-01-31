@@ -1,0 +1,29 @@
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete__input {
+    color: black
+}
+
+.autocomplete__result {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: calc(100% - 2px);
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.autocomplete__list {
+    list-style-type: none;
+    padding-left: 12px;
+    text-align: left;
+}
+
+.autocomplete__item {
+    cursor: pointer;
+}
